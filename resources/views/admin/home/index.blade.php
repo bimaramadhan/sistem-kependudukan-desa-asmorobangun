@@ -84,10 +84,54 @@
 	  <!-- /.info-box -->
 	</div>
 	<!-- /.col -->
-
-
-	
-<!-- /.col -->
+</div>
+<div class="row">
+	<div class="col-md-6 col-xs-12">
+		<div class="box box-success">
+			<div class="box-header with-border">
+				<h3 class="box-title">Jumlah Penduduk</h3>
+			</div>
+			<div class="box-body chart-responsive">
+				<div class="chart" id="jk-chart" style="height: 300px; position: relative;"></div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6 col-xs-12">
+		<div class="box box-success">
+			<div class="box-header with-border">
+				<h3 class="box-title">Status Pekerjaan</h3>
+			</div>
+			<div class="box-body chart-responsive">
+				<div class="chart" id="kerja-chart" style="height: 300px; position: relative;"></div>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- /.row -->
+@endsection
+@section('end-script')
+<script type="text/javascript">
+//DONUT CHART
+var donut = new Morris.Donut({
+  element: 'jk-chart',
+  resize: true,
+  colors: ["#03a9f4", "#DC143C"],
+  data: [
+	{label: "Laki-Laki", value: {{ $male }} },
+	{label: "Perempuan", value: {{ $female }} }
+  ],
+  hideHover: 'auto'
+});
+
+var donut = new Morris.Donut({
+  element: 'kerja-chart',
+  resize: true,
+  colors: ["#605ca8", "#001f3f"],
+  data: [
+	{label: "Sudah Bekerja", value: {{ $work }} },
+	{label: "Belum Bekerja", value: {{ $not_work }} }
+  ],
+  hideHover: 'auto'
+});
+</script>
 @endsection

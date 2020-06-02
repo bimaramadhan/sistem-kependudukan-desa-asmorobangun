@@ -15,6 +15,8 @@
   <link rel="stylesheet" href="{{asset('bower_components/font-awesome/css/font-awesome.min.css')}}">
   <!-- Ionicons -->
   <link rel="stylesheet" href="{{asset('bower_components/Ionicons/css/ionicons.min.css')}}">
+  <!-- Morris charts -->
+  <link href="{{asset('bower_components/morris.js/morris.css')}}" rel="stylesheet">
   @yield('select2-script')
   <!-- Theme style -->
   <link rel="stylesheet" href="{{asset('bower_components/admin-lte/dist/css/AdminLTE.min.css')}}">
@@ -79,6 +81,9 @@
 <script src="{{asset('bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 <!-- SlimScroll -->
 <script src="{{asset('bower_components/jquery-slimscroll/jquery.slimscroll.min.js')}}"></script>
+<!-- Morris.js charts -->
+<script src="{{asset('bower_components/raphael/raphael.min.js')}}"></script>
+<script src="{{asset('bower_components/morris.js/morris.min.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{asset('bower_components/admin-lte/dist/js/adminlte.min.js')}}"></script>
 @yield('end-script')

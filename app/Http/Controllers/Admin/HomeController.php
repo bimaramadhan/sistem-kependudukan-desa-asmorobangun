@@ -19,7 +19,7 @@ class HomeController extends Controller
 		$data['leader'] = $user->where('family_status_id', 1)->count();
 		$data['work'] = $user->whereNotIn('job_id', [1])->count();
 		$data['not_work'] = $user->where('job_id', 1)->count();
-    	$data['page_title'] = $this->title;
+		$data['page_title'] = $this->title;
     	return view($this->folder.'.index', $data);
     }
 
