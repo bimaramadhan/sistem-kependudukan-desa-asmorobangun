@@ -1,6 +1,13 @@
 @extends('admin.layouts.base')
 
 @section('content')
+<?php
+	$per_male = round(($male / $total) * 100);
+	$per_female = 100 - $per_male;
+
+	$per_work = round(($work / $total) * 100);
+	$per_not_work = 100 - $per_work;
+?>
 <div class="row">
 	<div class="col-md-3 col-sm-6 col-xs-12">
 	  <div class="info-box">
@@ -89,7 +96,7 @@
 	<div class="col-md-6 col-xs-12">
 		<div class="box box-success">
 			<div class="box-header with-border">
-				<h3 class="box-title">Jumlah Penduduk</h3>
+				<h3 class="box-title">Jenis Kelamin</h3>
 			</div>
 			<div class="box-body chart-responsive">
 				<div class="chart" id="jk-chart" style="height: 300px; position: relative;"></div>
@@ -106,6 +113,26 @@
 			</div>
 		</div>
 	</div>
+	<div class="col-md-6 col-xs-12">
+		<div class="box box-success">
+			<div class="box-header with-border">
+				<h3 class="box-title">Status Kawin</h3>
+			</div>
+			<div class="box-body chart-responsive">
+				<div class="chart" id="kawin-chart" style="height: 300px; position: relative;"></div>
+			</div>
+		</div>
+	</div>
+	<div class="col-md-6 col-xs-12">
+		<div class="box box-success">
+			<div class="box-header with-border">
+				<h3 class="box-title">Pendidikan</h3>
+			</div>
+			<div class="box-body chart-responsive">
+				<div class="chart" id="pendidikan-chart" style="height: 300px; position: relative;"></div>
+			</div>
+		</div>
+	</div>
 </div>
 <!-- /.row -->
 @endsection
@@ -114,22 +141,60 @@
 //DONUT CHART
 var donut = new Morris.Donut({
   element: 'jk-chart',
+  formatter: function (value, data) { return (value) + '%'; },
   resize: true,
   colors: ["#03a9f4", "#DC143C"],
   data: [
-	{label: "Laki-Laki", value: {{ $male }} },
-	{label: "Perempuan", value: {{ $female }} }
+	{label: "Laki-Laki", value: {{ $per_male }} },
+	{label: "Perempuan", value: {{ $per_female }} }
   ],
   hideHover: 'auto'
 });
 
 var donut = new Morris.Donut({
   element: 'kerja-chart',
+  formatter: function (value, data) { return (value) + '%'; },
   resize: true,
   colors: ["#605ca8", "#001f3f"],
   data: [
-	{label: "Sudah Bekerja", value: {{ $work }} },
-	{label: "Belum Bekerja", value: {{ $not_work }} }
+	{label: "Sudah Bekerja", value: {{ $per_work }} },
+	{label: "Belum Bekerja", value: {{ $per_not_work }} }
+  ],
+  hideHover: 'auto'
+});
+
+var kawin = <?php echo $perkawinan; ?>;
+var donut = new Morris.Donut({
+  element: 'kawin-chart',
+  resize: true,
+  colors: ["#e9e2d0", "#ea9085", "#d45d79", "#6e5773"],
+  data: [
+	{label: kawin[0].name, value: kawin[0].total },
+	{label: kawin[1].name, value: kawin[1].total },
+	{label: kawin[2].name, value: kawin[2].total },
+	{label: kawin[3].name, value: kawin[3].total }
+  ],
+  hideHover: 'auto'
+});
+
+var didik = <?php echo $pendidikan; ?>;
+var donut = new Morris.Donut({
+  element: 'pendidikan-chart',
+  resize: true,
+  colors: [
+	  "#fff100", "#ff8c00", "#e81123", "#ec008c", "#68217a", "#00188f", "#00bcf2", "#00b294", "#009e49", "#bad80a"
+  ],
+  data: [
+	{label: didik[0].name, value: didik[0].total },	
+	{label: didik[1].name, value: didik[1].total },	
+	{label: didik[2].name, value: didik[2].total },	
+	{label: didik[3].name, value: didik[3].total },	
+	{label: didik[4].name, value: didik[4].total },	
+	{label: didik[5].name, value: didik[5].total },	
+	{label: didik[6].name, value: didik[6].total },	
+	{label: didik[7].name, value: didik[7].total },	
+	{label: didik[8].name, value: didik[8].total },	
+	{label: didik[9].name, value: didik[9].total }
   ],
   hideHover: 'auto'
 });
