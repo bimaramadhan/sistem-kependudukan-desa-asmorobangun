@@ -96,7 +96,7 @@
 	<div class="col-md-6 col-xs-12">
 		<div class="box box-success">
 			<div class="box-header with-border">
-				<h3 class="box-title">Jenis Kelamin</h3>
+				<h3 class="box-title">Persentase Jenis Kelamin</h3>
 			</div>
 			<div class="box-body chart-responsive">
 				<div class="chart" id="jk-chart" style="height: 300px; position: relative;"></div>
@@ -106,7 +106,7 @@
 	<div class="col-md-6 col-xs-12">
 		<div class="box box-success">
 			<div class="box-header with-border">
-				<h3 class="box-title">Status Pekerjaan</h3>
+				<h3 class="box-title">Persentase Status Pekerjaan</h3>
 			</div>
 			<div class="box-body chart-responsive">
 				<div class="chart" id="kerja-chart" style="height: 300px; position: relative;"></div>
@@ -116,7 +116,7 @@
 	<div class="col-md-6 col-xs-12">
 		<div class="box box-success">
 			<div class="box-header with-border">
-				<h3 class="box-title">Status Kawin</h3>
+				<h3 class="box-title">Data Status Kawin</h3>
 			</div>
 			<div class="box-body chart-responsive">
 				<div class="chart" id="kawin-chart" style="height: 300px; position: relative;"></div>
@@ -126,7 +126,7 @@
 	<div class="col-md-6 col-xs-12">
 		<div class="box box-success">
 			<div class="box-header with-border">
-				<h3 class="box-title">Pendidikan</h3>
+				<h3 class="box-title">Data Pendidikan</h3>
 			</div>
 			<div class="box-body chart-responsive">
 				<div class="chart" id="pendidikan-chart" style="height: 300px; position: relative;"></div>
