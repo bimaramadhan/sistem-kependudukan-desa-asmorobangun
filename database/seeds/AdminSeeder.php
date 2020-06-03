@@ -21,8 +21,8 @@ class AdminSeeder extends Seeder
 				'created_at' => date('Y-m-d H:i:s')
         	],
             [
-                'name' => 'Bima',
-                'email' => 'bima@mail.com',
+                'name' => 'RT/RW',
+                'email' => 'rtrw@mail.com',
                 'password' => bcrypt('123456'),
                 'created_at' => date('Y-m-d H:i:s')
             ],
