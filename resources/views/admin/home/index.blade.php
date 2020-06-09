@@ -19,7 +19,7 @@
 <div class="row">
 	<div class="col-md-3 col-sm-6 col-xs-12">
 	  <div class="info-box">
-	    <span class="info-box-icon bg-green"><i class="ion ion-ios-people"></i></span>
+	    <span class="info-box-icon bg-green"><i class="fa fa-users"></i></span>
 
 	    <div class="info-box-content">
 	      <span class="info-box-text">Jumlah Penduduk</span>
@@ -33,7 +33,7 @@
 	<!-- /.col -->
 	<div class="col-md-3 col-sm-6 col-xs-12">
 	  <div class="info-box">
-	    <span class="info-box-icon bg-yellow"><i class="ion ion-person"></i></span>
+	    <span class="info-box-icon bg-yellow"><i class="fa fa-home"></i></span>
 
 	    <div class="info-box-content">
 	      <span class="info-box-text">Kepala Keluarga</span>
@@ -49,7 +49,7 @@
 		
 	<div class="col-md-3 col-sm-6 col-xs-12">
 	  <div class="info-box">
-	    <span class="info-box-icon bg-aqua"><i class="ion ion-male"></i></span>
+	    <span class="info-box-icon bg-aqua"><i class="fa fa-male"></i></span>
 
 	    <div class="info-box-content">
 	      <span class="info-box-text">Laki - laki</span>
@@ -62,7 +62,7 @@
 	<!-- /.col -->
 	<div class="col-md-3 col-sm-6 col-xs-12">
 	  <div class="info-box">
-	    <span class="info-box-icon bg-red"><i class="fa ion-female"></i></span>
+	    <span class="info-box-icon bg-red"><i class="fa fa-female"></i></span>
 
 	    <div class="info-box-content">
 	      <span class="info-box-text">Perempuan</span>
