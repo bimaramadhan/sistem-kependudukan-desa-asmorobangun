@@ -2,11 +2,19 @@
 
 @section('content')
 <?php
-	$per_male = round(($male / $total) * 100);
-	$per_female = 100 - $per_male;
+	if ($total > 0) {
+		$per_male = round(($male / $total) * 100);
+		$per_female = 100 - $per_male;
 
-	$per_work = round(($work / $total) * 100);
-	$per_not_work = 100 - $per_work;
+		$per_work = round(($work / $total) * 100);
+		$per_not_work = 100 - $per_work;
+	} else {
+		$per_male = 0;
+		$per_female = 0;
+
+		$per_work = 0;
+		$per_not_work = 0;
+	}
 ?>
 <div class="row">
 	<div class="col-md-3 col-sm-6 col-xs-12">
